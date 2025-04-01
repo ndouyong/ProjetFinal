@@ -12,3 +12,4 @@
 /Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.pdb
 /Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.genruntimeconfig.cache
 /Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/ref/LibreySystem.dll
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.sourcelink.json
