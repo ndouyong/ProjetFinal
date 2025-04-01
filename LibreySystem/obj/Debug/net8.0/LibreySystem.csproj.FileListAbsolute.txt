@@ -1,0 +1,14 @@
+/Users/jason/Documents/ProjetFinal/LibreySystem/bin/Debug/net8.0/LibreySystem
+/Users/jason/Documents/ProjetFinal/LibreySystem/bin/Debug/net8.0/LibreySystem.deps.json
+/Users/jason/Documents/ProjetFinal/LibreySystem/bin/Debug/net8.0/LibreySystem.runtimeconfig.json
+/Users/jason/Documents/ProjetFinal/LibreySystem/bin/Debug/net8.0/LibreySystem.dll
+/Users/jason/Documents/ProjetFinal/LibreySystem/bin/Debug/net8.0/LibreySystem.pdb
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.GeneratedMSBuildEditorConfig.editorconfig
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.AssemblyInfoInputs.cache
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.AssemblyInfo.cs
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.csproj.CoreCompileInputs.cache
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.dll
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/refint/LibreySystem.dll
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.pdb
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/LibreySystem.genruntimeconfig.cache
+/Users/jason/Documents/ProjetFinal/LibreySystem/obj/Debug/net8.0/ref/LibreySystem.dll
