@@ -16,7 +16,41 @@ while(x)
             break;
         } 
 
-       
+         //Option 2 pour Affichier les livres
+        case 2 : {
+            Api.Afficher(livres);
+        
+            break;
+        }
+
+        //Option pour vendre un livre
+        case 3 : {
+            Livre buffer = Api.Vendre(livres);
+            if (buffer != null) {
+                livres[buffer.Id-1].Quantite = buffer.Quantite;
+            }
+            break;
+        }
+
+        case 4 : {
+            Livre buffer = Api.Preter(livres);
+             if (buffer != null) {
+                livres[buffer.Id-1].Quantite = buffer.Quantite;
+            }
+            break;
+        }
+          case 5 : {
+            Livre buffer = Api.Retourner(livres);
+             if (buffer != null) {
+                livres[buffer.Id-1].Quantite = buffer.Quantite;
+            }
+            break;
+        }
+
+        case 6 : {
+            x = Api.Quitter();
+            break;
+        }
         
     }
 }
