@@ -9,10 +9,10 @@ namespace ProjetFinal
 {
     public class Employer
     {
-        private int Numero { get; set;}
-        private string Nom {get; set;}
+        public string Numero { get; set;}
+        public string Nom {get; set;}
 
-        public Employer(int numero, string nom)
+        public Employer(string numero, string nom)
         {
             this.Numero = numero;
             this.Nom = nom;

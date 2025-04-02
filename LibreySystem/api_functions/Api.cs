@@ -19,7 +19,7 @@ namespace ProjetFinal
                 {
                     //On affiche le menu
                     Console.WriteLine("");
-                    Console.WriteLine(" --- Menu Principal --- ");
+                    Console.WriteLine("\u001b[1m --- Menu Principal --- \u001b[0m");
                     Console.WriteLine(" 1. Ajouter un livre ");
                     Console.WriteLine(" 2. Afficher les livres disponibles ");
                     Console.WriteLine(" 3. Vendre un livre ");
@@ -108,7 +108,7 @@ namespace ProjetFinal
         }
         #endregion
 
-                //Cette fonction a pour but d'afficher un livre
+        //Cette fonction a pour but d'afficher un livre
         #region Afficher_livre
         public static void Afficher(List<Livre> livres)
         {
@@ -295,11 +295,11 @@ namespace ProjetFinal
             try
             {
                 double taxe_du_montant = (livre.Prix * 13/100);
-                Console.WriteLine(" --- Facture --- ");
+                Console.WriteLine("\u001b[1m --- Facture --- \u001b[0m");
                 Console.WriteLine($" Livre : {livre.Titre} ");
-                Console.WriteLine($" Prix hors taxe : ${livre.Prix} ");
-                Console.WriteLine($" Taxe(13%) : ${taxe_du_montant} ");
-                Console.WriteLine($" Total aprés taxe : $({livre.Prix + taxe_du_montant}) \n\n");
+                Console.WriteLine($" Prix hors taxe : ${livre.Prix:F2} ");
+                Console.WriteLine($" Taxe(13%) : ${taxe_du_montant:F2} ");
+                Console.WriteLine($" Total aprés taxe : ${(livre.Prix + taxe_du_montant):F2} \n\n");
             }
             catch (Exception ex)
             {
