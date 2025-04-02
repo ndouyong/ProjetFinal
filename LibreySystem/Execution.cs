@@ -93,6 +93,7 @@ namespace ProjetFinal
                             {
                                 int id = livres.Count + 1;
                                 livres.Add(Api.Ajout_livre(id));
+                                Console.WriteLine("Livre ajouté avec succès !");
                                 break;
                             }
 
