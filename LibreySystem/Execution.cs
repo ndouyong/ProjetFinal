@@ -6,15 +6,24 @@ using System.Threading.Tasks;
 
 namespace ProjetFinal
 {
+    /// <summary>
+    /// Classe principale gérant l'exécution du système de bibliothèque
+    /// Contient les méthodes essentielles pour l'initialisation et le fonctionnement de l'application
+    /// </summary>
     public class Execution
     {
         #region Initialisation
+        /// <summary>
+        /// Initialise la liste des employés avec leurs codes d'accès
+        /// </summary>
+        /// <returns>Liste des employés pré-enregistrés dans le système</returns>
         public static List<Employer> Debut()
         {
-            //Création de la liste des employés
+            // Création d'une nouvelle liste pour stocker les employés
             List<Employer> employers = new();
 
-            //Ajouter manuelle des employés
+            // Ajout des employés avec leurs codes d'accès respectifs
+            // Format: (Code d'accès, Nom de l'employé)
             employers.Add(new Employer("011", "Abderrahmane"));
             employers.Add(new Employer("102", "Samir"));
             employers.Add(new Employer("033", "Jonathan"));
@@ -25,13 +34,18 @@ namespace ProjetFinal
         }
         #endregion
 
-        #region Valdation_code
-        //Validation du code de l'utilisateur
+        #region Validation_code
+        /// <summary>
+        /// Vérifie et valide le code d'accès d'un employé
+        /// </summary>
+        /// <param name="employers">Liste des employés enregistrés</param>
+        /// <returns>L'employé correspondant au code saisi, ou null si le code est invalide</returns>
         public static Employer Employer_Check(List<Employer> employers)
         {
             try
             {
                 string code;
+                // Boucle de saisie jusqu'à obtenir un code valide
                 do
                 {
                     Console.WriteLine("Entrer le code employer : ");
@@ -40,6 +54,7 @@ namespace ProjetFinal
 
                 } while (string.IsNullOrEmpty(code));
 
+                // Recherche de l'employé correspondant au code saisi
                 Employer employer = employers.FirstOrDefault(e => e.Numero == code);
 
                 if (employer == null)
@@ -58,36 +73,36 @@ namespace ProjetFinal
         #endregion
 
         #region Execution_code
+        /// <summary>
+        /// Gère le menu principal et les opérations de l'application
+        /// </summary>
+        /// <param name="employer">Employé connecté au système</param>
         public static void Execu(Employer employer)
         {
             try
             {
+                // Initialisation de la liste des livres
                 List<Livre> livres = new();
 
-                //Console.WriteLine(livres.Count);
-                bool x = true;
-                while (x)
+                bool continuer = true;
+                while (continuer)
                 {
                     switch (Api.Menu())
                     {
-                        //Option 1 pour ajouter un livre
-                        case 1:
+                        case 1: // Ajout d'un nouveau livre
                             {
                                 int id = livres.Count + 1;
                                 livres.Add(Api.Ajout_livre(id));
                                 break;
                             }
 
-                        //Option 2 pour Affichier les livres
-                        case 2:
+                        case 2: // Affichage de tous les livres
                             {
                                 Api.Afficher(livres);
-
                                 break;
                             }
 
-                        //Option pour vendre un livre
-                        case 3:
+                        case 3: // Vente d'un livre
                             {
                                 Livre buffer = Api.Vendre(livres);
                                 if (buffer != null)
@@ -97,7 +112,7 @@ namespace ProjetFinal
                                 break;
                             }
 
-                        case 4:
+                        case 4: // Prêt d'un livre
                             {
                                 Livre buffer = Api.Preter(livres);
                                 if (buffer != null)
@@ -106,7 +121,8 @@ namespace ProjetFinal
                                 }
                                 break;
                             }
-                        case 5:
+
+                        case 5: // Retour d'un livre
                             {
                                 Livre buffer = Api.Retourner(livres);
                                 if (buffer != null)
@@ -116,23 +132,19 @@ namespace ProjetFinal
                                 break;
                             }
 
-                        case 6:
+                        case 6: // Quitter l'application
                             {
-                                x = Api.Quitter();
+                                continuer = Api.Quitter();
                                 break;
                             }
-
                     }
                 }
             }
             catch (System.Exception)
             {
-
                 throw;
             }
         }
         #endregion
-
-
     }
 }

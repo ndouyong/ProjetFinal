@@ -7,9 +7,15 @@ using System.Threading.Tasks;
 
 namespace ProjetFinal
 {
+    /// <summary>
+    /// Classe Api qui gère toutes les interactions avec l'utilisateur et les opérations sur les livres
+    /// </summary>
     public class Api
     {
-        //Cette fonction a pour but d'afficher le menu, recupere le choix de l'utilisateur et le retourner 
+        /// <summary>
+        /// Affiche le menu principal et récupère le choix de l'utilisateur
+        /// </summary>
+        /// <returns>Un entier représentant l'option choisie par l'utilisateur (1-6)</returns>
         #region Menu
         public static int Menu()
         {
@@ -48,7 +54,11 @@ namespace ProjetFinal
         }
         #endregion
     
-        //Cette fonction a pour but d'ajouter une livre et retourner l'objet livre
+        /// <summary>
+        /// Permet d'ajouter un nouveau livre à la bibliothèque
+        /// </summary>
+        /// <param name="id">L'identifiant unique du livre</param>
+        /// <returns>Un nouvel objet Livre avec les informations saisies par l'utilisateur</returns>
         #region Fonction_Ajout
         public static Livre Ajout_livre(int id)
         {
@@ -108,7 +118,10 @@ namespace ProjetFinal
         }
         #endregion
 
-        //Cette fonction a pour but d'afficher un livre
+        /// <summary>
+        /// Affiche la liste de tous les livres disponibles dans la bibliothèque
+        /// </summary>
+        /// <param name="livres">La liste des livres à afficher</param>
         #region Afficher_livre
         public static void Afficher(List<Livre> livres)
         {
@@ -135,6 +148,11 @@ namespace ProjetFinal
         }
         #endregion
 
+        /// <summary>
+        /// Gère le processus de vente d'un livre
+        /// </summary>
+        /// <param name="livres">La liste des livres disponibles</param>
+        /// <returns>Le livre vendu ou null si la vente n'a pas pu être effectuée</returns>
         #region Vendre_livre
         public static Livre Vendre(List<Livre> livres)
         {
@@ -185,6 +203,11 @@ namespace ProjetFinal
         }
         #endregion
 
+        /// <summary>
+        /// Gère le processus de prêt d'un livre
+        /// </summary>
+        /// <param name="livres">La liste des livres disponibles</param>
+        /// <returns>Le livre prêté ou null si le prêt n'a pas pu être effectué</returns>
         #region Preter_livre
         public static Livre Preter(List<Livre> livres)
         {
@@ -235,8 +258,13 @@ namespace ProjetFinal
         }
         #endregion
 
+        /// <summary>
+        /// Gère le processus de retour d'un livre
+        /// </summary>
+        /// <param name="livres">La liste des livres disponibles</param>
+        /// <returns>Le livre retourné ou null si le retour n'a pas pu être effectué</returns>
         #region Retourner_livre
-         public static Livre Retourner(List<Livre> livres)
+        public static Livre Retourner(List<Livre> livres)
         {
             try
             {
@@ -280,8 +308,11 @@ namespace ProjetFinal
         }
         #endregion
 
+        /// <summary>
+        /// Gère la sortie propre du programme
+        /// </summary>
+        /// <returns>false pour indiquer la fin du programme</returns>
         #region Option_quitter
-        //Une fonction simple pour quitter le Programme 
         public static bool Quitter()
         {
             Console.WriteLine("Programme terminer.\n");
@@ -289,6 +320,10 @@ namespace ProjetFinal
         }
         #endregion
 
+        /// <summary>
+        /// Génère et affiche une facture pour la vente d'un livre
+        /// </summary>
+        /// <param name="livre">Le livre pour lequel générer la facture</param>
         #region sous_fonction
         private static void Facture(Livre livre)
         {
