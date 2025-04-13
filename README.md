@@ -21,7 +21,7 @@ LibreySystem est une application console en C# qui permet de gérer une biblioth
 ## Installation
 1. Clonez le dépôt :
 ```bash
-git clone [URL_DU_REPO]
+git clone https://github.com/ndouyong/ProjetFinal.git
 ```
 
 2. Naviguez vers le dossier du projet :
